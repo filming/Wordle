@@ -1,5 +1,6 @@
 from random import choice
-
+from colorama import init, Fore
+init()
 
 class Game():
     def __init__(self):
@@ -22,8 +23,8 @@ class Game():
     
     def make_guess(self, guess):
         response = ""
-        game_word_char_occurrences = {}
 
+        game_word_char_occurrences = {}
         for char in self.game_word:
             if char in game_word_char_occurrences:
                 game_word_char_occurrences[char] += 1
@@ -47,16 +48,24 @@ class Game():
                     response += guess[i] + "R,"
         
         response = response[:-1]
+        formatted_response = self.format_response(response)
 
-
-
+        return formatted_response
     
-
-
+    def format_response(self, response):
+        formatted_response = Fore.WHITE + "" + Fore.WHITE
         
+        response_pairs = response.split(",")
+
+        for pair in response_pairs:
+            if pair[1] == "G":
+                formatted_response += Fore.GREEN + pair[0] + Fore.WHITE
+
+            elif pair[1] == "Y":
+                formatted_response += Fore.YELLOW + pair[0] + Fore.WHITE
+            
+            elif pair[1] == "R":
+                formatted_response += Fore.RED + pair[0] + Fore.WHITE
         
-        
-
-
-
-
+        return formatted_response
+    
