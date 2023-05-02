@@ -8,7 +8,7 @@ class Game():
 
     def setup(self):
         wordlist = []
-        with open("../../storage/wordlist.txt", encoding="utf-8") as f:
+        with open("../storage/wordlist.txt", encoding="utf-8") as f:
             for line in f.readlines():
                 line = line.strip()
                 if line: wordlist.append(line)
@@ -18,6 +18,37 @@ class Game():
     def new_game(self):
         game_word = choice(self.wordlist)
         self.game_word = game_word
+        print ("Game Word:", game_word)
+    
+    def make_guess(self, guess):
+        response = ""
+        game_word_char_occurrences = {}
+
+        for char in self.game_word:
+            if char in game_word_char_occurrences:
+                game_word_char_occurrences[char] += 1
+            else:
+                game_word_char_occurrences[char] = 1
+
+        for i in range (len(guess)):
+            if guess[i] not in game_word_char_occurrences:
+                response += guess[i] + "R,"
+            
+            else:
+                if (guess[i] == self.game_word[i]) and (game_word_char_occurrences[guess[i]] > 0):
+                    response += guess[i] + "G,"
+                    game_word_char_occurrences[guess[i]] -= 1
+                
+                elif game_word_char_occurrences[guess[i]] > 0:
+                    response += guess[i] + "Y,"
+                    game_word_char_occurrences[guess[i]] -= 1
+            
+                else:
+                    response += guess[i] + "R,"
+        
+        response = response[:-1]
+
+
 
     
 
