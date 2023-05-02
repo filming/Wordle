@@ -1,9 +1,16 @@
-
+from Game import Game
 
 
 
 def main():
-    print ("yo")
+    game = Game()
+    game.setup()
+    game.new_game()
+
+
+    
+
+
 
 
 if __name__ == "__main__":
