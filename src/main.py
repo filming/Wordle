@@ -11,10 +11,10 @@ def main():
 
     player = Player(game)
 
-    print ("[*] Welcome To Wordle! [*]")
-
+    print (Fore.LIGHTCYAN_EX + "[*]" + Fore.MAGENTA + " Welcome To Wordle! " + Fore.LIGHTCYAN_EX + "[*]" + Fore.WHITE)
+    
     while (player.get_remaining_guesses() > 0) and (game.get_game_status()):
-        guess = input("\n[?] Enter a word: ").lower()
+        guess = input(Fore.LIGHTCYAN_EX + "\n[?] Enter a word: " + Fore.WHITE).lower()
 
         if len(guess) != 5:
             print(Fore.RED + "[!] Your guess must be exactly 5 characters long!\n" + Fore.WHITE)
