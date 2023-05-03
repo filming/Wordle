@@ -25,6 +25,12 @@ def main():
         else:   
             player.make_guess(guess)
             game.gameboard(player.get_player_guesses())
+    
+    if game.get_word_guessed():
+        print (Fore.YELLOW + f"\n[>] Congratulations! You have guessed the correct word in {6 - player.get_remaining_guesses()} guesses!" + Fore.WHITE)
+    
+    else:
+        print (Fore.YELLOW + f"\n[>] Sorry! You ran out of guesses. The correct word was {game.get_game_word()}." + Fore.WHITE)
 
 
 if __name__ == "__main__":

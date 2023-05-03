@@ -29,11 +29,15 @@ class Game():
     def get_game_status(self):
         return self.game_status
     
+    def get_game_word(self):
+        return self.game_word
+    
     def check_guess(self, guess):
         response = ""
 
         if guess == self.game_word:
             self.game_status = False
+            self.word_guessed = True
 
         game_word_char_occurrences = {}
         for char in self.game_word:
