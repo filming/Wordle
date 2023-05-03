@@ -21,7 +21,6 @@ class Game():
     def new_game(self):
         game_word = choice(self.wordlist)
         self.game_word = game_word
-        print ("Game Word:", game_word)
     
     def get_word_guessed(self):
         return self.word_guessed
@@ -65,25 +64,6 @@ class Game():
         response = response[:-1]
 
         return response
-
-
-    
-    def format_response(self, response):
-        formatted_response = Fore.WHITE + "" + Fore.WHITE
-        
-        response_pairs = response.split(",")
-
-        for pair in response_pairs:
-            if pair[1] == "G":
-                formatted_response += Fore.GREEN + pair[0] + Fore.WHITE
-
-            elif pair[1] == "Y":
-                formatted_response += Fore.YELLOW + pair[0] + Fore.WHITE
-            
-            elif pair[1] == "R":
-                formatted_response += Fore.RED + pair[0] + Fore.WHITE
-        
-        return formatted_response
     
     def gameboard(self, player_guesses):
         gameboard_text = []
@@ -112,5 +92,3 @@ class Game():
         gameboard += Fore.MAGENTA + "\n}==========={" + Fore.WHITE
 
         print (gameboard)
-
-
