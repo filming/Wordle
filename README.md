@@ -30,6 +30,8 @@
 
 
 
+
+
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -56,6 +58,8 @@
 
 
 
+
+
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
@@ -79,6 +83,8 @@ I am not striving to create the best Wordle game known to man, I just wanted to 
 
 
 
+
+
 <!-- GETTING STARTED -->
 ## Getting Started
 
@@ -86,11 +92,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* colorama
-  ```sh
-  pip install colorama
-  ```
+* Python is required in order for this project to work.
 
 ### Installation
 
@@ -107,12 +109,16 @@ This is an example of how to list things you need to use the software and how to
 
 
 
+
+
 <!-- USAGE EXAMPLES -->
 ## Usage
 
 Once you run the program, you can begin guessing words. This is shown above in the <a href="#about-the-project">About The Project Section</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 
 
 
@@ -133,6 +139,8 @@ If you have a suggestion that would make this better, please fork the repo and c
 
 
 
+
+
 <!-- LICENSE -->
 ## License
 
@@ -142,14 +150,18 @@ Distributed under the MIT License.
 
 
 
+
+
 <!-- CONTACT -->
 ## Contact
 
-[![Discord][Discord.com]][Discord-url] Filming#0001
+[![Discord][Discord.com]][Discord-url] Filming
 
 Project Link: [https://github.com/filming/Wordle](https://github.com/filming/Wordle)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 
 
 
